@@ -44,7 +44,7 @@
 				</thead>
 				<tbody>
 			        @forelse($activities as $activity)
-					<tr {{ $activity->status === 4 ? "class=success" : "" }}>
+					<tr {{ $activity->status == 4 ? "class=success" : "" }}>
 						<th scope="row">{{ $activity->id }}</th>
 						<td>{{ $activity->name }}</td>
 						<td>{{ $activity->description }}</td>
@@ -63,7 +63,7 @@
 						@endif
 
 						@endforeach
-						<td>{{ $activity->situation === 0 ? "Inativo" : "Ativo" }}</td>
+						<td>{{ $activity->situation == 0 ? "Inativo" : "Ativo" }}</td>
 						<td>
 							@if($activity->status == 4)
 			                <button type="button" class="btn btn-info btn-sm" title="Editar" alt="Editar" disabled="disabled"><i class="fa fa-edit fa-fw"></i></button> 

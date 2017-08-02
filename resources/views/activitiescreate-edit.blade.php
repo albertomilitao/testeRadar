@@ -114,8 +114,8 @@
     <div class="col-md-10">
 @endif
       <select class="form-control" name="situation">
-        <option value="1" {{ isset($activity) && $activity->situation === 1 ? "selected" : "" }}>Ativo</option>
-        <option value="0" {{ isset($activity) && $activity->situation === 0 ? "selected" : "" }}>Inativo</option>
+        <option value="1" {{ isset($activity) && $activity->situation == 1 ? "selected" : "" }}>Ativo</option>
+        <option value="0" {{ isset($activity) && $activity->situation == 0 ? "selected" : "" }}>Inativo</option>
       </select>
     </div>
   </div>
